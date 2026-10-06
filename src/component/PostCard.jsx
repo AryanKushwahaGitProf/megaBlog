@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import appwriteService from '../appwrite/config'
 
 // The editor saves HTML, so turn it into plain text and keep the first bit
+
 function toExcerpt(html = '') {
   const text = new DOMParser().parseFromString(html, 'text/html').body.textContent || ''
   return text.replace(/\s+/g, ' ').trim().slice(0, 240)
